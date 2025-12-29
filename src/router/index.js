@@ -18,6 +18,14 @@ const router = createRouter({
     {
       path: '/m_1',
       component: () => import('@/views/mission/m_1.vue')
+    },
+    {
+      path: '/page108',
+      component: () => import('@/views/page108.vue')
+    },
+    {
+      path: '/page110',
+      component: () => import('@/views/page110.vue')
     }
   ],
 })
