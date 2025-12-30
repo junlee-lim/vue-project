@@ -1,5 +1,5 @@
 <script setup>
-const routerList = ["component", 'page98', 'page103', 'page108', 'page110',
+const routerList = ["component", 'page98', 'page103', 'page108', 'page110', 'page114', 'page118', 'page123', 'page125',
                     'm_1'];
 </script>
 
@@ -21,5 +21,5 @@ const routerList = ["component", 'page98', 'page103', 'page108', 'page110',
 </template>
 
 <style scoped>
-
+nav > a {display: inline-block;}
 </style>
