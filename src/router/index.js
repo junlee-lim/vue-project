@@ -3,15 +3,15 @@ import { globalState } from '@/globalState';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes:globalState.map(item => {
+  routes: globalState.map(item => {
     const filePath = `../views${item.startsWith('m') ? '/mission' : ''}/${item}.vue`
     console.log(filePath);
-    return{
+    return {
       path: `/${item}`,
       component: () => import(filePath)
     }
   })
 
-})
+});
 
 export default router
