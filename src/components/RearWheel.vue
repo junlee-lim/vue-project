@@ -1,30 +1,22 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter';
+import { computed } from 'vue';
 import Tire from './Tire.vue';
 const page = 'history';
 const counterStore = useCounterStore();
+// 각도를 계산하는 computed 속성
+const rotationDegree = computed(() => `${counterStore.count * 45}deg`);
 </script>
 
 <template>
     <div class="rear-wheel">
         <span class="rotating-text">Rear Wheel</span>
-        <Tire color="YELLOW" />
+        <Tire class="rotating-text" color="YELLOW" />
         <div>Times: {{ counterStore.count }}</div>
         <button @click="counterStore.increment">+rotation</button>
         <button @click="counterStore.decrease">-rotation</button>
     </div>
 </template>
-<!-- 
-<script setup>
-import { computed } from 'vue';
-import { useCounterStore } from '@/stores/counter';
-// ... 나머지 import
-
-const counterStore = useCounterStore();
-
-// 각도를 계산하는 computed 속성
-const rotationDegree = computed(() => `${counterStore.count * 45}deg`);
-</script> -->
 
 <style scoped>
 .rear-wheel{
