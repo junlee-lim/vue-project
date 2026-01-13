@@ -21,6 +21,12 @@ onMounted(async () => {
             <span class="right">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
             </span>
+            <button aria-label="이전" disabled type="button" style="--dls-button-or-anchor-width-px: 28; --dls-button-or-anchor-height-px: 28;">
+                before
+            </button>
+            <button aria-label="다음" disabled type="button" style="--dls-button-or-anchor-width-px: 28; --dls-button-or-anchor-height-px: 28;">
+                after
+            </button>
             <div class="d-flex">
                 <lodging-item v-for="subItem in item.sectionData.items" :key="subItem.demandStayListing.id"
                     :picture="subItem.contextualPictures[0].picture"
@@ -37,7 +43,7 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.d-flex { display: flex; overflow-x: scroll; }
+.d-flex { display: flex; overflow-x: hidden; }
 div.sections:not(:first-child) {margin-top: 30px;}
 div.sections { width: 80vw; }
 .right svg{display: inline !important;}
